@@ -1,0 +1,22 @@
+# ************* Section (a) ************* 
+apiVersion: v1
+
+# ************* Section (b) ************* 
+kind: Pod
+
+# ************* Section (c) ************* 
+metadata:
+  name: multipods
+
+# ************* Section (d) ************* 
+spec:
+  containers:
+  - name: container1
+    image: yasirdocker/flag:latest
+    ports: 
+    - containerPort: 80
+
+  - name: container2
+    image: busybox:latest
+    command: ["sleep", "3600"]
+

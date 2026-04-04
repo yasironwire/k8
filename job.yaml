@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+
+kind: Job
+
+metadata:
+  name: jobexample
+
+spec:
+  template:
+    spec:
+      containers:
+      - name: jobcontainer
+        image: docker/whalesay
+        command: ["cowsay", "Hello Team"]
+      restartPolicy: OnFailure
+  backoffLimit: 6
+  activeDeadlineSeconds: 60
+
+
+# activeDeadlineSeconds is a time duration otherwise abort.
+
+# backofflimit means How many attempts to complete the task. 
+
+# restartPolicy, If we use "OnFailure" Kubernetes will restart the container with it failed. 
+#                 If we use "Never" Kubernetes will delete this container and create new to finish the task.

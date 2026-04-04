@@ -1,0 +1,16 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: podwithannotations
+  annotations:
+    createdby: "Yasir Butt"
+    email: yasir.butt@hotmail.com
+
+spec:
+  containers:
+  - name: container-new
+    image: yasirdocker/flag:latest
+    Ports:
+    - containerPort: 80
