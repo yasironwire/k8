@@ -1,0 +1,17 @@
+# ************* Section (a) ************* 
+apiVersion: v1
+
+# ************* Section (b) ************* 
+kind: Pod
+
+# ************* Section (c) ************* 
+metadata:
+  name: myfirstpodwithubuntu
+
+# ************* Section (d) ************* 
+spec:
+  containers:
+  - name: container1
+    image: ubuntu           # <-- changed image
+    command: ["sleep"]      # <-- run sleep command
+    args: ["20"]            # <-- sleep for 20 seconds

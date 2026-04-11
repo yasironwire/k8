@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: podwithreplicaset
+  labels:
+    app: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dev
+  template:
+    metadata:
+      labels:
+        app: dev
+    spec:
+      containers:
+      - name: pod1
+        image: yasirdocker/flag
+        ports:
+        - containerPort: 80
