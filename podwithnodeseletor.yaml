@@ -11,5 +11,5 @@ spec:
   containers:
   - name: container1
     image: yasirdocker/flag:latest
-    Ports:
+    ports:
     - containerPort: 80
