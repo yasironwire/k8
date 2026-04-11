@@ -10,11 +10,11 @@ spec:
     spec:
       containers:
       - name: jobcontainer
-        image: docker/whalesay
+        image: yasirdocker/whalesay
         command: ["cowsay", "Hello Team"]
       restartPolicy: OnFailure
   backoffLimit: 6
-  activeDeadlineSeconds: 60
+  activeDeadlineSeconds: 120
 
 
 # activeDeadlineSeconds is a time duration otherwise abort.
