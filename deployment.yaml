@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 1                   # Number of Pods
+  selector:
+    matchLabels:
+      app: myapp               # Label to identify Pods managed by this Deployment
+  template:
+    metadata:
+      labels:
+        app: myapp             # Label applied to Pods
+    spec:
+      containers:
+      - name: mycontainer
+        image: nginx:latest     # Container image
+        ports:
+        - containerPort: 80     # Expose port 80
