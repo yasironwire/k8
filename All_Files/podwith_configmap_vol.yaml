@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-using-configmap
+spec:
+  containers:
+  - name: mycontainer
+    image: nginx
+    volumeMounts:
+      - name: config-volume
+        mountPath: /etc/config   # Path inside container where ConfigMap files appear
+  volumes:
+    - name: config-volume
+      configMap:
+        name: myconfigmap        # Name of your existing ConfigMap

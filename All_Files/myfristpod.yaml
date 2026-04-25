@@ -1,0 +1,17 @@
+# ************* Section (a) ************* 
+apiVersion: v1
+
+# ************* Section (b) ************* 
+kind: Pod
+
+# ************* Section (c) ************* 
+metadata:
+  name: pod3
+
+# ************* Section (d) ************* 
+spec:
+  containers:
+  - name: container10
+    image: yasirdocker/flag:latest
+    # ports: 
+    #   - containerPort: 80

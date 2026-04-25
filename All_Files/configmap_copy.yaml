@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap
+data:
+  USERNAME: ahir
+  PORT: "9999"
+  DB: "3193"

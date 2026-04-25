@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata: 
+  name: podwithnamespace
+  namespace: uat
+
+spec:
+  containers:
+  - name: container1
+    image: yasirdocker/flag:latest
+    ports:
+    - containerPort: 80

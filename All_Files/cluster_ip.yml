@@ -1,0 +1,20 @@
+apiVersion: v1
+
+
+kind: Service
+
+
+metadata:
+  name: owclusterip
+
+
+spec:
+  selector:
+    type: fe
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      
+  type: ClusterIP

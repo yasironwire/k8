@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap
+data:
+  USERNAME: yasir
+  PORT: "8080"
+  URL: www.onwire.pk

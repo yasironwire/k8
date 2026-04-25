@@ -1,0 +1,6 @@
+firstname
+Yasir
+lastname
+Butt
+designation
+trainer
